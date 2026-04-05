@@ -3,151 +3,203 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Sahil ❤️ Jaatni | Eternal Bond</title>
+    <title>Official Record | CCW</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Playfair+Display:ital,wght@0,700;1,900&family=Poppins:wght@300;600&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Playfair+Display:wght@700&family=Poppins:wght@300;600&display=swap');
 
         :root { 
-            --gold: #d4af37; --deep-red: #800000; --soft-pink: #ffe4e1; --glass: rgba(255, 255, 255, 0.9);
+            --gold: #b8860b; --red: #8b0000; --pink: #fff0f5; --glass: rgba(255, 255, 255, 0.92);
         }
 
         * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
-        body, html { margin: 0; padding: 0; width: 100%; height: 100%; overflow: hidden; background: var(--soft-pink); font-family: 'Poppins', sans-serif; }
+        body, html { margin: 0; padding: 0; width: 100%; height: 100%; overflow: hidden; font-family: 'Poppins', sans-serif; background: var(--pink); }
 
-        /* Background Fix */
-        .screen { 
-            position: fixed; width: 100%; height: 100%; display: none; 
-            flex-direction: column; justify-content: center; align-items: center; 
-            padding: 20px; text-align: center; background-size: cover; background-position: center;
-            background-color: var(--soft-pink); /* Background black hone se rokega */
+        /* Background Layer */
+        .bg-layer {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            z-index: -1; background-size: cover; background-position: center;
+            filter: brightness(0.7); transition: 1s ease;
         }
-        .active { display: flex; animation: fadeIn 0.8s ease; }
+
+        .screen { position: fixed; width: 100%; height: 100%; display: none; flex-direction: column; justify-content: center; align-items: center; padding: 20px; text-align: center; }
+        .active { display: flex; animation: fadeIn 0.8s; }
         @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 
-        /* Luxury Card */
         .luxury-card { 
-            background: var(--glass); backdrop-filter: blur(8px); padding: 25px; 
-            border-radius: 20px; border: 2px solid var(--gold); width: 90%; max-width: 450px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            background: var(--glass); backdrop-filter: blur(10px); padding: 30px; 
+            border-radius: 15px; border: 1px solid var(--gold); width: 95%; max-width: 420px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
         }
 
-        h1 { font-family: 'Playfair Display', serif; color: var(--deep-red); font-size: 1.8rem; }
-        .shayeri-text { font-family: 'Dancing Script', cursive; font-size: 1.5rem; color: #333; font-weight: bold; }
-        .btn-gold { background: var(--gold); color: #fff; border: none; padding: 12px 30px; border-radius: 50px; cursor: pointer; margin-top: 20px; font-weight: bold; }
+        h1 { font-family: 'Playfair Display', serif; color: var(--red); font-size: 1.8rem; margin-bottom: 15px; }
+        .shayeri { font-family: 'Dancing Script', cursive; font-size: 1.5rem; color: #222; line-height: 1.4; font-weight: bold; }
+        .btn-gold { background: var(--gold); color: #fff; border: none; padding: 14px 35px; border-radius: 50px; font-weight: bold; margin-top: 20px; cursor: pointer; box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
 
-        /* Specific Wallpapers */
-        #p1 { background-image: url('https://w0.peakpx.com/wallpaper/550/203/HD-wallpaper-anime-couple-love-romance-red-flowers.jpg'); }
-        #p2 { background-image: url('https://w0.peakpx.com/wallpaper/137/915/HD-wallpaper-anime-couple-love-flowers-night-stars.jpg'); }
-        #p3 { background-image: url('https://w0.peakpx.com/wallpaper/435/101/HD-wallpaper-anime-original-couple-flower-garden-love.jpg'); }
-        #p4 { background-image: url('https://w0.peakpx.com/wallpaper/724/18/HD-wallpaper-anime-couple-love-romance-red-theme.jpg'); }
-        #p5 { background-image: url('https://w0.peakpx.com/wallpaper/931/855/HD-wallpaper-red-anime-love-couple-falling-petals.jpg'); }
-        #p6 { background-image: url('https://w0.peakpx.com/wallpaper/359/656/HD-wallpaper-anime-couple-love-romance-stars.jpg'); }
-        #p7 { background-image: url('https://w0.peakpx.com/wallpaper/339/468/HD-wallpaper-anime-couple-romance-marriage.jpg'); }
+        /* --- 100% COURT CERTIFICATE DESIGN --- */
+        #captureArea { 
+            background: #fff; padding: 30px; border: 4px solid #333; color: #000; 
+            text-align: left; font-family: 'Times New Roman', serif; width: 100%; max-width: 500px;
+            position: relative; line-height: 1.4;
+        }
+        .cert-header { text-align: center; font-weight: bold; text-transform: uppercase; border-bottom: 2px solid #000; margin-bottom: 15px; padding-bottom: 5px; }
+        .cert-header span { font-size: 0.8rem; display: block; font-weight: normal; }
+        
+        .legal-text { font-size: 0.85rem; text-align: justify; margin: 10px 0; border-bottom: 1px dashed #ccc; padding-bottom: 10px; }
+        .data-row { margin: 8px 0; font-size: 0.95rem; }
+        .data-row b { text-transform: uppercase; width: 100px; display: inline-block; }
+        
+        .stamp { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(-20deg); border: 4px double rgba(139, 0, 0, 0.2); color: rgba(139, 0, 0, 0.2); font-size: 3rem; font-weight: 900; padding: 10px; border-radius: 10px; z-index: 0; pointer-events: none; }
+        
+        .sig-section { display: flex; justify-content: space-between; margin-top: 40px; position: relative; z-index: 1; }
+        .sig-box { text-align: center; width: 45%; }
+        .signature { font-family: 'Dancing Script', cursive; font-size: 1.6rem; border-bottom: 1px solid #000; margin-bottom: 5px; min-height: 35px; color: #001f3f; }
 
-        /* Certificate Fix */
-        #captureArea { background: white; padding: 20px; border: 10px double #444; color: #000; text-align: left; font-family: serif; width: 100%; max-width: 450px; }
-        .sig-font { font-family: 'Dancing Script', cursive; font-size: 1.8rem; border-bottom: 1px solid #000; }
+        #generator { background: #fff; z-index: 2000; position: fixed; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 20px; }
     </style>
 </head>
 <body>
 
-<div id="generator" style="position:fixed; width:100%; height:100%; background:white; z-index:1000; display:flex; flex-direction:column; align-items:center; justify-content:center; padding:20px;">
-    <h2>CCW Love Generator</h2>
-    <input type="text" id="uName" placeholder="Aapka Naam" style="width:100%; max-width:300px; padding:10px; margin:5px;">
-    <input type="text" id="pName" placeholder="Unka Naam" style="width:100%; max-width:300px; padding:10px; margin:5px;">
-    <input type="text" id="ytLink" placeholder="YouTube Song Link" style="width:100%; max-width:300px; padding:10px; margin:5px;">
-    <textarea id="customMsg" placeholder="Special Shayari" style="width:100%; max-width:300px; padding:10px; margin:5px;"></textarea>
-    <button class="btn-gold" onclick="generateLink()">Create Link 🔗</button>
-    <p id="linkOutput" style="word-break:break-all; font-size:12px; margin-top:10px; color:red;"></p>
+<div class="bg-layer" id="mainBg"></div>
+
+<div id="generator">
+    <h2 style="color:var(--red)">CCW Marriage Registrar</h2>
+    <input type="text" id="uName" placeholder="Groom's Name (Sahil)" style="width:85%; padding:12px; margin:8px; border-radius:8px; border:1px solid #ccc;">
+    <input type="text" id="pName" placeholder="Bride's Name (Jaatni)" style="width:85%; padding:12px; margin:8px; border-radius:8px; border:1px solid #ccc;">
+    <input type="text" id="ytLink" placeholder="YouTube Link (Romantic Song)" style="width:85%; padding:12px; margin:8px; border-radius:8px; border:1px solid #ccc;">
+    <textarea id="customMsg" placeholder="Personal Vows / Shayari" style="width:85%; padding:12px; margin:8px; border-radius:8px; border:1px solid #ccc;"></textarea>
+    <button class="btn-gold" onclick="generateLink()">Issue Digital Link 🔗</button>
+    <p id="linkOutput" style="font-size:10px; color:red; margin-top:15px; word-break:break-all;"></p>
 </div>
 
 <div class="screen" id="p1">
-    <div class="luxury-card"><h1>Happy Birthday! ❤️</h1><p>Welcome to our beautiful journey.</p><button class="btn-gold" onclick="next(2)">Start ✨</button></div>
+    <div class="luxury-card">
+        <h1>Special Invite ❤️</h1>
+        <p>Aapki bday ke moke par, ek official sarprise tayyar hai.</p>
+        <button class="btn-gold" onclick="showPage(2)">Procced Entry ✨</button>
+    </div>
 </div>
 
 <div class="screen" id="p2">
-    <div class="luxury-card"><p class="shayeri-text">"Teri har muskurahat meri jaan hai,<br>Tu hi mera pura armaan hai."</p><button class="btn-gold" onclick="next(3)">Next ➡️</button></div>
+    <div class="luxury-card">
+        <p class="shayeri">"Teri aankhon mein saba, teri baaton mein nasha,<br>Tu mile toh mile mujhe jeene ki wajah."</p>
+        <button class="btn-gold" onclick="showPage(3)">Next ➡️</button>
+    </div>
 </div>
 
 <div class="screen" id="p3">
     <div class="luxury-card">
-        <div id="player" style="width:100%; aspect-ratio:16/9; margin-bottom:10px;"></div>
-        <p id="ytShayeri" class="shayeri-text"></p>
-        <button class="btn-gold" onclick="next(4)">Next ➡️</button>
+        <div id="player" style="width:100%; aspect-ratio:16/9; margin-bottom:10px; border-radius:10px; overflow:hidden;"></div>
+        <p id="ytShayeri" class="shayeri" style="font-size:1.2rem"></p>
+        <button class="btn-gold" onclick="showPage(4)">Next ➡️</button>
     </div>
 </div>
 
-<div class="screen" id="p4"><div class="luxury-card"><p class="shayeri-text">"Log sukoon dhundte hain,<br>Mujhe aapki baaton mein jannat milti hai."</p><button class="btn-gold" onclick="next(5)">Next ➡️</button></div></div>
-<div class="screen" id="p5"><div class="luxury-card"><p class="shayeri-text">"Mera kal bhi tum, mera aaj bhi tum."</p><button class="btn-gold" onclick="next(6)">Next ➡️</button></div></div>
+<div class="screen" id="p4">
+    <div class="luxury-card"><p class="shayeri">"Mera kal bhi tum, mera aaj bhi tum,<br>Is bheed mein mera khas bhi tum."</p><button class="btn-gold" onclick="showPage(5)">Final Question 💍</button></div>
+</div>
+
+<div class="screen" id="p5">
+    <div class="luxury-card" style="background:rgba(0,0,0,0.85); color:#fff; border-color:#fff;">
+        <h2 style="font-family:'Playfair Display'; color:var(--gold)">Will You Marry Me?</h2>
+        <p id="propText" style="font-family:'Dancing Script'; font-size:1.5rem">Will you be mine forever?</p>
+        <div style="display:flex; gap:10px; justify-content:center; margin-top:20px;">
+            <button class="btn-gold" style="background:#2ecc71" onclick="showPage(6)">YES! ✅</button>
+            <button class="btn-gold" id="noBtn" onmouseover="dodge()" style="background:#ff1f4f">NO ❌</button>
+        </div>
+    </div>
+</div>
 
 <div class="screen" id="p6">
-    <div class="luxury-card">
-        <h1>Will You Marry Me? 💍</h1>
-        <div style="display:flex; gap:10px; justify-content:center;">
-            <button class="btn-gold" style="background:green" onclick="next(7)">YES!</button>
-            <button class="btn-gold" id="noBtn" onmouseover="dodge()" style="background:red">NO</button>
-        </div>
-    </div>
-</div>
-
-<div class="screen" id="p7">
     <div id="captureArea">
-        <h3 style="text-align:center; border-bottom:2px solid #000;">MARRIAGE CERTIFICATE</h3>
-        <p>This certifies the bond between:</p>
-        <p><b>Groom:</b> <span id="gName"></span></p>
-        <p><b>Bride:</b> <span id="bName"></span></p>
-        <div style="display:flex; justify-content:space-between; margin-top:40px;">
-            <div style="text-align:center;"><div class="sig-font" id="gSig"></div><small>Signature (Groom)</small></div>
-            <div style="text-align:center;"><div class="sig-font" id="bSig"></div><small>Signature (Bride)</small></div>
+        <div class="stamp">CCW APPROVED</div>
+        <div class="cert-header">
+            FORM NO. IV <span>(Rule 12)</span>
+            MEMORANDUM OF MARRIAGE
+            <span>GOVERNMENT OF THE HEART - REGISTRY DEPARTMENT</span>
         </div>
+        
+        <p class="legal-text">
+            This is to certify that the marriage described below has been solemnized between the parties this day according to the Hindu Marriage Act, 1955, and has been entered in the Register of Marriages maintained under the said Act.
+        </p>
+
+        <div class="data-row"><b>GROOM:</b> <span id="c_groom"></span></div>
+        <div class="data-row"><b>BRIDE:</b> <span id="c_bride"></span></div>
+        <div class="data-row"><b>DATE:</b> <span id="c_date"></span></div>
+        <div class="data-row"><b>PLACE:</b> Registry Office, Eternity Hall.</div>
+        <div class="data-row"><b>STATUS:</b> Bound by Love Forever.</div>
+
+        <div class="sig-section">
+            <div class="sig-box">
+                <div class="signature" id="s_groom"></div>
+                <span style="font-size:0.7rem;">Signature of Groom</span>
+            </div>
+            <div class="sig-box">
+                <div class="signature" id="s_bride"></div>
+                <span style="font-size:0.7rem;">Signature of Bride</span>
+            </div>
+        </div>
+        
+        <p style="font-size:0.6rem; text-align:center; margin-top:20px; border-top:1px solid #000; padding-top:5px;">
+            This is a digitally generated certificate valid across all dimensions of love. No physical copy required.
+        </p>
     </div>
-    <button class="btn-gold" onclick="saveCard()">Save to Gallery 📥</button>
+    <button class="btn-gold" onclick="saveToGallery()">Save to Gallery 📥</button>
 </div>
 
 <script>
+    const images = [
+        "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=1000&q=80",
+        "https://images.unsplash.com/photo-1518133910546-b6c2fb7d79e3?auto=format&fit=crop&w=1000&q=80",
+        "https://images.unsplash.com/photo-1542038784456-1ea8e935640e?auto=format&fit=crop&w=1000&q=80",
+        "https://images.unsplash.com/photo-1494774157365-9e04c6720e47?auto=format&fit=crop&w=1000&q=80"
+    ];
+
+    function showPage(n) {
+        document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+        document.getElementById('p' + n).classList.add('active');
+        const randomImg = images[Math.floor(Math.random() * images.length)];
+        document.getElementById('mainBg').style.backgroundImage = `url('${randomImg}')`;
+    }
+
     function generateLink() {
         const u = document.getElementById('uName').value;
         const p = document.getElementById('pName').value;
         const yt = document.getElementById('ytLink').value;
         const sh = document.getElementById('customMsg').value;
         let v = yt.includes('v=') ? yt.split('v=')[1].split('&')[0] : yt.split('/').pop();
-        const url = window.location.origin + window.location.pathname + `?u=${u}&p=${p}&v=${v}&s=${sh}`;
+        const url = window.location.origin + window.location.pathname + `?u=${encodeURIComponent(u)}&p=${encodeURIComponent(p)}&v=${v}&s=${encodeURIComponent(sh)}`;
         document.getElementById('linkOutput').innerText = url;
         navigator.clipboard.writeText(url);
-        alert("Link Copied!");
+        alert("Link Generated & Copied!");
     }
 
     const params = new URLSearchParams(window.location.search);
     if(params.has('u')) {
         document.getElementById('generator').style.display = 'none';
-        document.getElementById('p1').classList.add('active');
+        showPage(1);
+        const u = params.get('u'); const p = params.get('p');
         document.getElementById('ytShayeri').innerText = params.get('s');
-        document.getElementById('gName').innerText = params.get('u');
-        document.getElementById('bName').innerText = params.get('p');
-        document.getElementById('gSig').innerText = params.get('u');
-        document.getElementById('bSig').innerText = params.get('p');
+        document.getElementById('propText').innerText = `Kya tum hamesha ke liye ${u} ki bankar rahogi?`;
+        document.getElementById('c_groom').innerText = u; document.getElementById('c_bride').innerText = p;
+        document.getElementById('s_groom').innerText = u; document.getElementById('s_bride').innerText = p;
+        document.getElementById('c_date').innerText = new Date().toLocaleDateString('en-GB');
         document.getElementById('player').innerHTML = `<iframe width="100%" height="100%" src="https://www.youtube.com/embed/${params.get('v')}?autoplay=1" frameborder="0" allow="autoplay"></iframe>`;
-    }
-
-    function next(n) {
-        document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
-        document.getElementById('p' + n).classList.add('active');
     }
 
     function dodge() {
         const b = document.getElementById('noBtn');
         b.style.position = 'fixed';
-        b.style.left = Math.random() * 80 + '%';
-        b.style.top = Math.random() * 80 + '%';
+        b.style.left = Math.random() * 70 + '%'; b.style.top = Math.random() * 70 + '%';
     }
 
-    function saveCard() {
+    function saveToGallery() {
         html2canvas(document.getElementById('captureArea')).then(canvas => {
             const a = document.createElement('a');
-            a.download = 'marriage-certificate.png';
+            a.download = 'Official_Marriage_Record.png';
             a.href = canvas.toDataURL();
             a.click();
+            alert("Official Card Saved to Gallery!");
         });
     }
 </script>
