@@ -3,149 +3,158 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Sahil ❤️ Jaatni | Forever</title>
+    <title>Sahil ❤️ Jaatni | Eternal Bond</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Playfair+Display:ital,wght@0,900;1,900&family=Poppins:wght@300;600&display=swap');
+        /* Modern, Readable, & Classy Fonts */
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Playfair+Display:ital,wght@0,700;1,900&family=Poppins:wght@300;600&display=swap');
 
         :root { 
-            --gold: #ffd700; 
+            --gold: #d4af37; 
             --deep-red: #800000;
-            --soft-pink: #ffb6c1;
-            --glass: rgba(255, 255, 255, 0.1);
+            --soft-pink: #ffe4e1;
+            --pure-white: #ffffff;
+            /* Glassmorphism Effect */
+            --glass: rgba(255, 255, 255, 0.88);
         }
 
-        * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+        * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; outline: none; }
         
         body, html { 
             margin: 0; padding: 0; width: 100%; height: 100%; 
-            color: #fff; font-family: 'Poppins', sans-serif; 
-            overflow: hidden; background: #000;
-        }
-
-        /* Luxury Gradient Background */
-        .main-bg {
-            position: fixed; width: 100%; height: 100%;
-            background: linear-gradient(45deg, #ff1f4f, #800000, #ff758c);
-            z-index: -2;
+            color: #333; font-family: 'Poppins', sans-serif; 
+            overflow: hidden; 
+            /* Backup Theme Gradient */
+            background: linear-gradient(135deg, var(--soft-pink) 0%, var(--pure-white) 50%, #ffb6c1 100%);
         }
 
         /* Generator Styling */
         #generator { 
             position: absolute; width: 100%; height: 100%; z-index: 1000; 
-            background: rgba(0,0,0,0.9); display: flex; flex-direction: column; 
+            background: rgba(255,255,255,0.98); display: flex; flex-direction: column; 
             align-items: center; justify-content: center; padding: 20px;
         }
         .input-box { 
-            background: var(--glass); padding: 30px; border-radius: 30px; 
-            width: 100%; max-width: 400px; border: 2px solid var(--gold);
-            backdrop-filter: blur(10px);
+            background: white; padding: 30px; border-radius: 20px; 
+            width: 100%; max-width: 400px; border: 2px solid var(--deep-red);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
         }
         input, textarea { 
-            width: 100%; padding: 12px; margin: 10px 0; border-radius: 15px; 
-            border: 1px solid var(--soft-pink); background: white; color: #000;
+            width: 100%; padding: 12px; margin: 10px 0; border-radius: 8px; 
+            border: 1px solid #ccc; font-family: 'Poppins';
         }
         
-        /* Screens */
+        /* Screens with Anime Backgrounds */
         .screen { 
             position: fixed; width: 100%; height: 100%; 
             display: none; flex-direction: column; justify-content: center; 
             align-items: center; padding: 20px; text-align: center;
-            background-size: cover; background-position: center;
+            opacity: 0; transition: opacity 0.8s ease-in-out;
+            background-size: cover; background-position: center; background-repeat: no-repeat;
         }
-        .active { display: flex; animation: slideIn 1.2s ease-out; }
-        @keyframes slideIn { from { opacity: 0; transform: scale(1.1); } to { opacity: 1; transform: scale(1); } }
+        .active { display: flex; opacity: 1; }
 
-        /* Luxury Card */
+        /* Assigning HD Anime Wallpapers to Pages */
+        #p1 { background-image: url('https://w0.peakpx.com/wallpaper/550/203/HD-wallpaper-anime-couple-love-romance-red-flowers.jpg'); }
+        #p2 { background-image: url('https://w0.peakpx.com/wallpaper/137/915/HD-wallpaper-anime-couple-love-flowers-night-stars.jpg'); }
+        #p3 { background-image: url('https://w0.peakpx.com/wallpaper/435/101/HD-wallpaper-anime-original-couple-flower-garden-love.jpg'); }
+        #p4 { background-image: url('https://w0.peakpx.com/wallpaper/724/18/HD-wallpaper-anime-couple-love-romance-red-theme.jpg'); }
+        #p5 { background-image: url('https://w0.peakpx.com/wallpaper/931/855/HD-wallpaper-red-anime-love-couple-falling-petals.jpg'); }
+        #p6 { background-image: url('https://w0.peakpx.com/wallpaper/359/656/HD-wallpaper-anime-couple-love-romance-stars.jpg'); }
+        #p7 { background-image: url('https://w0.peakpx.com/wallpaper/137/915/HD-wallpaper-anime-couple-love-flowers.jpg'); }
+        #p8 { background-image: url('https://w0.peakpx.com/wallpaper/339/468/HD-wallpaper-anime-couple-romance-marriage.jpg'); }
+        #p9 { background-image: url('https://w0.peakpx.com/wallpaper/550/203/HD-wallpaper-anime-couple-love-romance-red.jpg'); }
+
+        /* Luxury Card with Glass Effect for Readability */
         .luxury-card { 
-            background: rgba(0, 0, 0, 0.7); backdrop-filter: blur(15px); 
-            padding: 35px; border-radius: 50px 5px 50px 5px; 
-            border: 2px solid var(--gold); width: 90%; max-width: 450px;
-            box-shadow: 0 0 30px rgba(255, 215, 0, 0.3);
+            background: var(--glass); backdrop-filter: blur(10px); 
+            padding: 30px; border-radius: 15px; 
+            border: 1px solid rgba(212, 175, 55, 0.4);
+            width: 90%; max-width: 450px;
+            box-shadow: 0 15px 35px rgba(128, 0, 0, 0.15);
         }
+        
+        /* Typography */
+        h1 { font-family: 'Playfair Display', serif; color: var(--deep-red); font-size: 2.2rem; margin-bottom: 10px; }
+        h2 { font-family: 'Playfair Display', serif; color: var(--gold); font-size: 1.8rem; }
+        .shayeri-text { font-family: 'Dancing Script', cursive; font-size: 1.6rem; color: #444; line-height: 1.5; font-weight: 600; }
+        .formal-text { font-size: 0.9rem; color: #444; line-height: 1.6; }
 
-        .shayeri-text { font-family: 'Dancing Script', cursive; font-size: 1.8rem; color: var(--soft-pink); line-height: 1.4; }
-        h1, h2 { font-family: 'Playfair Display', serif; color: var(--gold); }
-
+        /* Buttons */
         .btn-gold { 
-            background: var(--gold); color: #000; border: none; 
-            padding: 15px 40px; border-radius: 50px; font-weight: 900; 
-            margin-top: 25px; cursor: pointer; text-transform: uppercase;
-            box-shadow: 0 5px 15px rgba(255, 215, 0, 0.4);
+            background: linear-gradient(135deg, var(--gold) 0%, #f1d37f 100%); color: #fff; border: none; 
+            padding: 14px 35px; border-radius: 50px; font-weight: 600; 
+            margin-top: 25px; cursor: pointer; text-transform: uppercase; letter-spacing: 1px;
+            box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3); transition: 0.3s;
         }
+        .btn-gold:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(212, 175, 55, 0.4); }
 
-        /* Page Anime Backgrounds */
-        #p1 { background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://w0.peakpx.com/wallpaper/550/203/HD-wallpaper-anime-couple-love-romance-red-flowers-sweet-anime-girl-anime-boy-scenic-cherry-blossom-clouds-sky-anime-couples.jpg'); }
-        #p2 { background-image: url('https://w0.peakpx.com/wallpaper/137/915/HD-wallpaper-anime-couple-love-flowers-night-stars-romance-sweet-anime-girl-anime-boy-scenic-clouds-sky-water-anime-couples.jpg'); }
-        #p3 { background-image: url('https://w0.peakpx.com/wallpaper/435/101/HD-wallpaper-anime-original-couple-flower-garden-love-pink.jpg'); }
-        #p4 { background-image: url('https://w0.peakpx.com/wallpaper/724/18/HD-wallpaper-anime-couple-love-romance-red-theme-stars-sweet-anime-girl-anime-boy-scenic-clouds-sky-anime-couples.jpg'); }
-        #p5 { background-image: url('https://w0.peakpx.com/wallpaper/931/855/HD-wallpaper-red-anime-love-couple-falling-petals-aesthetic.jpg'); }
-        #p6 { background-image: url('https://w0.peakpx.com/wallpaper/359/656/HD-wallpaper-anime-couple-love-romance-stars-sweet-anime-girl-anime-boy-scenic-clouds-sky-anime-couples.jpg'); }
-        #p7 { background-image: url('https://w0.peakpx.com/wallpaper/137/915/HD-wallpaper-anime-couple-love-flowers-night-stars-romance-sweet.jpg'); }
-        #p8 { background-image: url('https://w0.peakpx.com/wallpaper/339/468/HD-wallpaper-anime-couple-romance-marriage-love.jpg'); }
-        #p9 { background-image: url('https://w0.peakpx.com/wallpaper/550/203/HD-wallpaper-anime-couple-love-romance-red-flowers.jpg'); }
-
-        /* Certificate Capture Area */
-        #captureArea { padding: 20px; background: white; border: 15px double #d4af37; color: #000; text-align: center; }
+        /* Court Certificate Styling (Last Page) */
+        #captureArea { 
+            padding: 30px; background: #fff; border: 10px double #444; color: #000; text-align: left; 
+            font-family: 'Times New Roman', Times, serif; width: 100%; max-width: 500px;
+        }
+        .cert-header { text-align: center; text-transform: uppercase; font-weight: bold; border-bottom: 2px solid #000; padding-bottom: 10px; margin-bottom: 15px; }
+        .sig-field { margin-top: 30px; display: flex; justify-content: space-between; }
+        .sig-box { text-align: center; width: 45%; }
+        .real-sig { font-family: 'Dancing Script', cursive; font-size: 1.8rem; color: #000; border-bottom: 1px solid #000; padding-bottom: 5px; margin-bottom: 5px; }
     </style>
 </head>
 <body>
 
-<div class="main-bg"></div>
-
 <div id="generator">
-    <h1 style="color:var(--gold);">CCW Luxury Maker</h1>
+    <h1 style="color:var(--gold); font-family: 'Playfair Display';">CCW Eternal Maker</h1>
     <div class="input-box">
-        <input type="text" id="uName" placeholder="Apna Naam (Sahil)">
-        <input type="text" id="pName" placeholder="Unka Naam (Jaatni)">
-        <input type="text" id="ytLink" placeholder="YouTube Song Link">
-        <textarea id="customMsg" placeholder="Special Shayari..."></textarea>
-        <button class="btn-gold" style="width:100%" onclick="generateLink()">Copy Magic Link 🔗</button>
-        <p id="linkOutput" style="font-size:10px; color:var(--gold); margin-top:15px; word-break:break-all;"></p>
+        <input type="text" id="uName" placeholder="Groom Name (e.g., Sahil)">
+        <input type="text" id="pName" placeholder="Bride Name (e.g., Jaatni)">
+        <input type="text" id="ytLink" placeholder="YouTube Love Song Link">
+        <textarea id="customMsg" placeholder="Custom Vachan/Shayari for Page 3..."></textarea>
+        <button class="btn-gold" style="width:100%" onclick="generateLink()">Create & Copy Link 🔗</button>
+        <p id="linkOutput" style="font-size:10px; color:var(--deep-red); margin-top:15px; word-break:break-all;"></p>
     </div>
 </div>
 
 <div class="screen" id="p1">
     <div class="luxury-card">
-        <h1>Happy Birthday Jaatni! ❤️</h1>
-        <p>Aapki muskurahat hi meri har dua ka jawab hai.</p>
-        <button class="btn-gold" onclick="next(2)">Shuru Karein? ✨</button>
+        <h1>Happy Birthday! ❤️</h1>
+        <p class="formal-text">Today marks the celebration of the most beautiful soul I know. Your presence is the greatest gift.</p>
+        <button class="btn-gold" onclick="next(2)">Begin the Journey</button>
     </div>
 </div>
 
 <div class="screen" id="p2">
     <div class="luxury-card">
-        <p class="shayeri-text">"Meri har saans mein tera naam basi hai,<br>Teri har hansi mein meri khushi basi hai.<br>Tere bina ye zindagi kuch nahi,<br>Bas tere sath hi meri jannat basi hai."</p>
-        <button class="btn-gold" onclick="next(3)">Next ➡️</button>
+        <p class="shayeri-text">"Teri aankhon mein saba, teri baaton mein nasha,<br>Tu mile toh mile mujhe jeene ki wajah.<br>Mera har pal ab tere hi naam hai,<br>Tu hi meri subah, tu hi meri shaam hai."</p>
+        <button class="btn-gold" onclick="next(3)">Continue ➡️</button>
     </div>
 </div>
 
 <div class="screen" id="p3">
     <div class="luxury-card">
-        <p>Aapki Pasand Ka Song... 🎵</p>
-        <div id="player" style="width:100%; aspect-ratio:16/9; border-radius:15px; overflow:hidden; border:2px solid var(--gold);"></div>
-        <p id="ytShayeri" class="shayeri-text" style="font-size:1.2rem; margin-top:10px;"></p>
-        <button class="btn-gold" onclick="next(4)">Aage Badho ➡️</button>
+        <h2>A Melody For You 🎵</h2>
+        <div id="player" style="width:100%; aspect-ratio:16/9; border-radius:8px; overflow:hidden; border:2px solid var(--gold); margin: 15px 0;"></div>
+        <p id="ytShayeri" class="shayeri-text" style="font-size:1.3rem;"></p>
+        <button class="btn-gold" onclick="next(4)">Next ➡️</button>
     </div>
 </div>
 
 <div class="screen" id="p4">
     <div class="luxury-card">
-        <p class="shayeri-text">"Log duniya ko jannat kehte honge,<br>Magar mera sukoon toh tumhari baahon mein hai."</p>
-        <button class="btn-gold" onclick="next(5)">Go Deeper ➡️</button>
+        <p class="shayeri-text">"In traditional terms, you are my missing piece.<br>Log jannat ki baat karte hain,<br>Mera sukoon toh bas tumhari baahon mein hai."</p>
+        <button class="btn-gold" onclick="next(5)">Deeper ➡️</button>
     </div>
 </div>
 
 <div class="screen" id="p5">
     <div class="luxury-card">
-        <p class="shayeri-text">"Tumhare sath har pal ek tyohar hai,<br>Aur tumhare bina ye dil bekarar hai."</p>
+        <p class="shayeri-text">"Every heartbeat of mine speaks your name.<br>Tumhare sath har pal ek tyohar hai,<br>Aur tumhare bina ye dil bekarar hai."</p>
         <button class="btn-gold" onclick="next(6)">Feel This ✨</button>
     </div>
 </div>
 
 <div class="screen" id="p6">
     <div class="luxury-card">
-        <p class="shayeri-text">"Jaatni ka gussa aur Sahil ka pyar,<br>Zindagi bhar rahega yehi aitbaar."</p>
+        <p class="shayeri-text">"The perfect blend of fire and calm.<br>Jaatni ka gussa aur Sahil ka pyar,<br>Zindagi bhar rahega yehi aitbaar."</p>
         <button class="btn-gold" onclick="next(7)">Almost Near ➡️</button>
     </div>
 </div>
@@ -153,28 +162,54 @@
 <div class="screen" id="p7">
     <div class="luxury-card">
         <p class="shayeri-text">"Mera kal bhi tum, mera aaj bhi tum,<br>Is bheed bhari duniya mein mera khas bhi tum."</p>
-        <button class="btn-gold" onclick="next(8)">Final Secret 💍</button>
+        <button class="btn-gold" onclick="next(8)">The Question... 💍</button>
     </div>
 </div>
 
 <div class="screen" id="p8">
-    <div class="luxury-card">
-        <h2 style="font-size: 2.2rem;">Will You Marry Me?</h2>
-        <p id="proposalMsg">Will you be mine forever?</p>
+    <div class="luxury-card" style="background: rgba(0,0,0,0.8); border: 2px solid var(--gold); color: #fff;">
+        <h2 style="font-size: 2.2rem; color: var(--pure-white);">Will You Marry Me?</h2>
+        <p id="proposalMsg" style="font-family:'Dancing Script'; font-size: 1.5rem;">Will you be mine forever?</p>
         <div style="display:flex; gap:20px; justify-content:center; margin-top:20px;">
-            <button class="btn-gold" style="background:#2ecc71;" onclick="next(9)">YES! ✅</button>
-            <button class="btn-gold" id="noBtn" onmouseover="dodge()" style="background:#ff1f4f;">NO ❌</button>
+            <button class="btn-gold" style="background:#2ecc71; box-shadow:none;" onclick="next(9)">YES! ✅</button>
+            <button class="btn-gold" id="noBtn" onmouseover="dodge()" style="background:#ff1f4f; box-shadow:none;">NO ❌</button>
         </div>
     </div>
 </div>
 
-<div class="screen" id="p9">
+<div class="screen" id="p9" style="background: #fdfdfd;">
     <div id="captureArea">
-        <h1 style="border-bottom: 3px solid #000; margin:0;">Certificate of Love</h1>
-        <p>This is to certify that</p>
-        <h2 id="certNames" style="font-family:'Dancing Script'; color:#d4af37; font-size: 2.5rem;">Sahil & Jaatni</h2>
-        <p>Are Bound Together Forever!</p>
-        <p style="font-size: 10px;">CCW Digital Seal of Loyalty 💍</p>
+        <div class="cert-header">
+            FORM 'A'<br>
+            CERTIFICATE OF SOLEMNIZATION OF MARRIAGE<br>
+            (See Rule 12 of the Hindu Marriage Rules, 1955)
+        </div>
+        <p class="formal-text">
+            This is to certify that a marriage has been solemnized this day between the parties described below, 
+            according to the rites and ceremonies of Hindu Religion, and the same has been registered under the Hindu Marriage Act, 1955.
+        </p>
+        <p class="formal-text">
+            <b>Groom:</b> <span id="groomNameCert">Sahil</span><br>
+            <b>Bride:</b> <span id="brideNameCert">Jaatni</span><br>
+            <b>Date:</b> <span id="currentDate"></span><br>
+            <b>Place:</b> Eternity Place, Heart City.
+        </p>
+        <p class="formal-text" style="font-style:italic;">
+            "We hereby declare that we accept each other as husband and wife, 
+            to hold from this day forward, for better, for worse, for richer, for poorer, 
+            in sickness and in health, to love and to cherish, till death us do part."
+        </p>
+        
+        <div class="sig-field">
+            <div class="sig-box">
+                <div class="real-sig" id="groomSig">Sahil</div>
+                <div class="formal-text" style="font-size:0.8rem;">Signature of Groom</div>
+            </div>
+            <div class="sig-box">
+                <div class="real-sig" id="brideSig">Jaatni</div>
+                <div class="formal-text" style="font-size:0.8rem;">Signature of Bride</div>
+            </div>
+        </div>
     </div>
     <button class="btn-gold" onclick="saveCard()">Save to Gallery 📥</button>
 </div>
@@ -186,22 +221,36 @@
         const yt = document.getElementById('ytLink').value;
         const sh = document.getElementById('customMsg').value;
         
+        if(!u || !p) return alert("Please enter both names!");
+
         let vidId = yt.includes('v=') ? yt.split('v=')[1].split('&')[0] : yt.split('/').pop();
         const finalUrl = `${window.location.href.split('?')[0]}?u=${encodeURIComponent(u)}&p=${encodeURIComponent(p)}&v=${vidId}&s=${encodeURIComponent(sh)}`;
         
         document.getElementById('linkOutput').innerText = finalUrl;
         navigator.clipboard.writeText(finalUrl);
-        alert("Link Copy Ho Gaya! Ab bhej do.");
+        alert("Link copied to clipboard! Send it to your Jaatni.");
     }
 
     const params = new URLSearchParams(window.location.search);
     if(params.has('u')) {
         document.getElementById('generator').style.display = 'none';
         document.getElementById('p1').classList.add('active');
+        
+        const u = params.get('u');
+        const p = params.get('p');
+        
         document.getElementById('ytShayeri').innerText = params.get('s');
-        document.getElementById('proposalMsg').innerText = `Kya tum hamesha ke liye ${params.get('u')} ki bankar rahogi?`;
-        document.getElementById('certNames').innerText = `${params.get('u')} ❤️ ${params.get('p')}`;
-        document.getElementById('player').innerHTML = `<iframe width="100%" height="100%" src="https://www.youtube.com/embed/${params.get('v')}?autoplay=1" frameborder="0" allow="autoplay"></iframe>`;
+        document.getElementById('proposalMsg').innerText = `Kya tum hamesha ke liye ${u} ki bankar rahogi?`;
+        
+        // Certificate Fields
+        document.getElementById('groomNameCert').innerText = u;
+        document.getElementById('brideNameCert').innerText = p;
+        document.getElementById('groomSig').innerText = u; // Signature Font
+        document.getElementById('brideSig').innerText = p; // Signature Font
+        document.getElementById('currentDate').innerText = new Date().toLocaleDateString('en-GB');
+
+        // YouTube Player
+        document.getElementById('player').innerHTML = `<iframe width="100%" height="100%" src="https://www.youtube.com/embed/${params.get('v')}?autoplay=1" frameborder="0" allow="autoplay; encrypted-media"></iframe>`;
     }
 
     function next(n) {
@@ -216,15 +265,14 @@
         btn.style.top = Math.random() * (window.innerHeight - 50) + 'px';
     }
 
-    // Function to download the certificate as an image
     function saveCard() {
         const element = document.getElementById('captureArea');
         html2canvas(element).then(canvas => {
             const link = document.createElement('a');
-            link.download = 'Our_Love_Certificate.png';
+            link.download = 'Our_Marriage_Certificate.png';
             link.href = canvas.toDataURL('image/png');
             link.click();
-            alert("Card download ho raha hai! Check your gallery.");
+            alert("Card downloaded! Check your gallery.");
         });
     }
 </script>
